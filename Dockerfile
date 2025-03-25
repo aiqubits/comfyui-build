@@ -41,7 +41,7 @@ RUN python3.12 -m pip install --timeout=10000 comfyui-frontend-package==1.11.8 t
 WORKDIR /app
 COPY . /app
 
-VOLUME [ "/models", "/app/models" ]
+VOLUME [ "/app/input", "/app/output", "/app/models" ]
 
 # Creates a non-root user with an explicit UID and adds permission to access the /app folder
 # For more info, please refer to https://aka.ms/vscode-docker-python-configure-containers
